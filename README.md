@@ -4,7 +4,7 @@ A dark-themed, graffiti-style personal portfolio website built with React and Ta
 
 ## 🌐 Live Website
 
-**Website URL:** https://keinkuo2k.github.io/personal-website/
+**Website URL:** https://kevinkuo2k.github.io/personal-website/
 
 *(Replace `[your-github-username]` with your actual GitHub username after deployment)*
 
