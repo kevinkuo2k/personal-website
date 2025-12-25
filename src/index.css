@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #f5f1e8;
+    color: #2d2d2d;
+    font-family: "Inter", "Noto Sans TC", sans-serif;
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+
+  /* Navigation Styles */
+  .nav-link {
+    @apply relative px-4 py-2 text-base font-medium transition-all duration-200;
+  }
+
+  .nav-link:hover {
+    color: #2d2d2d;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-200;
+    background-color: #2d2d2d;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link.active {
+    color: #2d2d2d;
+  }
+
+  .nav-link.active::after {
+    @apply w-full;
+  }
+
+  /* Timeline Styles */
+  .timeline-item {
+    @apply relative pl-8 pb-12 border-l-2;
+    border-color: #e0ddd4;
+  }
+
+  .timeline-item::before {
+    content: '';
+    @apply absolute left-[-5px] top-0 w-2 h-2 rounded-full;
+    background-color: #2d2d2d;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply rounded-none p-8 border transition-all duration-200;
+    background-color: #ffffff;
+    border-color: #e0ddd4;
+  }
+
+  /* Heading Styles */
+  .page-heading {
+    @apply font-display text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+    color: #2d2d2d;
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-semibold mb-8;
+    color: #2d2d2d;
+  }
+
+  /* Image Styles */
+  .content-img {
+    @apply rounded-none border transition-all duration-200;
+    border-color: #e0ddd4;
+  }
+
+  /* Container Styles */
+  .page-container {
+    @apply min-h-screen pt-24 pb-16 px-6 md:px-12 lg:px-20;
+  }
+
+  .content-wrapper {
+    @apply max-w-5xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .border-divider {
+    @apply border-t;
+    border-color: #e0ddd4;
+  }
+}
